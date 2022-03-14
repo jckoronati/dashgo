@@ -1,4 +1,5 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Avatar, Box, Flex, HStack, Icon, Input, Text } from "@chakra-ui/react";
+import { RiNotificationLine, RiSearchLine, RiUserHeartLine } from "react-icons/ri";
 
 export function Header() {
     return (
@@ -13,7 +14,91 @@ export function Header() {
             align="center"
         >
             <Text
-                fontSize="3xl">dashgo</Text>
+                fontSize="3xl"
+                fontWeight="bold"
+                letterSpacing="tight"
+                w="64"
+            >
+                dashgo
+                <Text
+                    as="span"
+                    color="pink"
+                    marginLeft="1"
+                >.</Text>
+            </Text>
+            <Flex
+                as="label"
+                flex="1"
+                py="4"
+                px="8"
+                ml="6"
+                maxW="400"
+                alignSelf="center"
+                color="gray.200"
+                bgColor="gray.800"
+                borderRadius="full"
+            >
+                <Input
+                    color="gray.50"
+                    variant="unstyled"
+                    px="4"
+                    mr="4"
+                    placeholder="Buscar na plataforma"
+                    _placeholder={{
+                        color: 'gray.400'
+                    }}
+                />
+                <Icon
+                    as={RiSearchLine}
+                    fontSize="20"
+                />
+            </Flex>
+            <Flex
+                alignItems="center"
+                ml="auto"
+            >
+                <HStack
+                    spacing="8"
+                    mx="8"
+                    pr="8"
+                    py="1"
+                    color="gray.300"
+                    borderRightWidth={1}
+                    borderColor="gray.700"
+                >
+                    <Icon
+                        as={RiNotificationLine}
+                        fontSize="20"
+                    />
+                    <Icon
+                        as={RiUserHeartLine}
+                        fontSize="20"
+                    />
+                </HStack>
+                <Flex
+                    alignItems="center"
+                >
+                    <Box
+                        mr="4"
+                        textAlign="right"
+                    >
+                        <Text>
+                            Júlio Cezar Koronati
+                        </Text>
+                        <Text
+                            color="gray.300"
+                            fontSize="small"
+                        >
+                            jckoronati@gmail.com
+                        </Text>
+                    </Box>
+                    <Avatar
+                        name="Júlio Cezar Koronati"
+                        size="md"
+                        src="https://avatars.githubusercontent.com/u/37700027?s=400&u=e106fbf6cf452f4c155c11ed3ad11c19b78bd0e7&v=4"
+                    />
+                </Flex>
+            </Flex>
         </Flex>
     );
 }
