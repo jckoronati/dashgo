@@ -29,6 +29,7 @@ export function Sidebar() {
                             display="flex"
                             alignItems="center"
                             color="pink.400"
+                            href="/dashboard"
                         >
                             <Icon
                                 as={RiDashboardLine}
@@ -44,6 +45,7 @@ export function Sidebar() {
                         <Link
                             display="flex"
                             alignItems="center"
+                            href="/users"
                         >
                             <Icon
                                 as={RiContactsLine}
